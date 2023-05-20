@@ -18,6 +18,21 @@ def start_and_login(name):
     pyg.moveTo(930, 1555)
     pyg.leftClick()
 
+def login(name):
+    pyg.moveTo(700, 775)
+    pyg.leftClick()
+    pyg.write(name)
+    pyg.moveTo(700, 900)
+    pyg.leftClick()
+    pyg.write(passMap[name])
+    pyg.moveTo(930, 1555)
+    pyg.leftClick()
+
 def switch_account(name):
-    return None
+    pyg.moveTo(3004, 432)
+    pyg.click()
+    pyg.moveTo(1988, 1100)
+    pyg.click()
+    time.sleep(2)
+    login(name)
 
